@@ -70,7 +70,9 @@ function guessNumber() {
     // console.log(input);
     //document.write(input1);
     if (numList.join("") == input.join("")) {
-      alert(`[정답 : ${input.join("")}] [점수 : ${10 - step}점]   홈런!`);
+      alert(
+        `[정답 : ${input.join("")}]    홈런!   ${step}번 만에 맞추셨습니다!`
+      );
       const newCell1 = newRow.insertCell(0);
       const newCell2 = newRow.insertCell(1);
       const newCell3 = newRow.insertCell(2);
@@ -121,7 +123,7 @@ function restart() {
   const table = document.getElementById("result");
   $inputSet.style.display = "none";
   $startText.style.display = "none";
-  for (let i = 0; i <= step; i++) {
+  for (let i = 0; i < step; i++) {
     table.deleteRow(-1);
   }
   table.style.display = "none";
